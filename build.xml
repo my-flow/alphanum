@@ -1,0 +1,31 @@
+<!--
+build file for ant
+http://jakarta.apache.org/ant/index.html
+-->
+
+<project name="importlist" default="javadoc" basedir=".">
+  <property name="src" value="src"/>
+
+  <target name="javadoc">
+    <javadoc sourcefiles="${src}/AlphanumComparator.java"
+             excludepackagenames=""
+             defaultexcludes="true"
+             destdir="docs/api"
+             access="protected"
+             author="true"
+             version="true"
+             use="true"
+             windowtitle="The Alphanum Algorithm"
+             linksource="true"
+             verbose="no">
+      <doctitle><![CDATA[<h1>Alphanum Algorithm</h1>]]></doctitle>
+      <link href="http://download.oracle.com/javase/1.5.0/docs/api/"/>
+      <footer><![CDATA[
+      	<a href="https://github.com/my-flow/alphanum">
+      	 The Alphanum Algorithm
+        </a>
+      ]]></footer>
+    </javadoc>
+  </target>
+
+</project>
